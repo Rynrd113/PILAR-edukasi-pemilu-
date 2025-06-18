@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Fitur Manajemen User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Demo Fitur Manajemen User - Admin Panel PILAR</h1>
+            
+            <!-- Login Info -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">Informasi Login Admin</h2>
+                <div class="bg-blue-50 border border-blue-200 rounded-md p-4">
+                    <p class="text-blue-800"><strong>Email:</strong> admin@example.com</p>
+                    <p class="text-blue-800"><strong>Password:</strong> admin123</p>
+                </div>
+                <div class="mt-4">
+                    <a href="/login" class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 inline-block">
+                        Login ke Admin Panel
+                    </a>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">✨ Fitur User Management Baru</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• <strong>Tambah User Baru</strong> - Membuat akun user atau admin</li>
+                        <li>• <strong>Edit User</strong> - Mengubah nama, email, dan role</li>
+                        <li>• <strong>Hapus User</strong> - Menghapus user (kecuali admin aktif)</li>
+                        <li>• <strong>Reset Password</strong> - Mengatur ulang password user</li>
+                        <li>• <strong>Pencarian & Filter</strong> - Cari user berdasarkan nama/email</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">👥 Sample Users</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Admin</span>
+                            <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs">Admin</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>John Doe</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">User</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Jane Smith</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">User</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Bob Johnson</span>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">User</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Guide -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">📋 Panduan Akses Fitur</h3>
+                <ol class="text-gray-600 space-y-2">
+                    <li><strong>1.</strong> Login menggunakan kredensial admin di atas</li>
+                    <li><strong>2.</strong> Pada sidebar admin, klik menu "<strong>Kelola User</strong>"</li>
+                    <li><strong>3.</strong> Anda akan melihat daftar semua user dalam sistem</li>
+                    <li><strong>4.</strong> Gunakan tombol "<strong>Tambah User</strong>" untuk membuat user baru</li>
+                    <li><strong>5.</strong> Klik ikon edit untuk mengubah data user</li>
+                    <li><strong>6.</strong> Klik ikon key untuk reset password user</li>
+                    <li><strong>7.</strong> Klik ikon delete untuk menghapus user (tidak bisa hapus diri sendiri)</li>
+                </ol>
+            </div>
+
+            <!-- Dashboard Preview -->
+            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">📊 Dashboard Terintegrasi</h3>
+                <p class="text-gray-600 mb-3">Dashboard admin sekarang menampilkan:</p>
+                <ul class="text-gray-600 space-y-1">
+                    <li>• Statistik total user dan admin</li>
+                    <li>• Daftar user terbaru yang mendaftar</li>
+                    <li>• Quick access ke halaman kelola user</li>
+                </ul>
+            </div>
+
+            <!-- Technical Details -->
+            <div class="bg-gray-50 rounded-lg p-6 mt-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">🔧 Detail Teknis</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                    <div>
+                        <h4 class="font-semibold mb-2">File yang Dibuat/Dimodifikasi:</h4>
+                        <ul class="space-y-1">
+                            <li>• UserController.php</li>
+                            <li>• StoreUserRequest.php</li>
+                            <li>• UpdateUserRequest.php</li>
+                            <li>• User Model (updated)</li>
+                            <li>• Admin views (index, create, edit)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Fitur Keamanan:</h4>
+                        <ul class="space-y-1">
+                            <li>• Validasi input lengkap</li>
+                            <li>• Password hashing</li>
+                            <li>• Middleware admin protection</li>
+                            <li>• Self-deletion prevention</li>
+                            <li>• CSRF protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

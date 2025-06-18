@@ -1,0 +1,135 @@
+&lt;?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Session\TokenMismatchException;
+use Symfony\Component\HttpFoundation\Response;
+
+class HandleCsrfTokenExpired
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        try {
+            return $next($request);
+        } catch (TokenMismatchException $e) {
+            // Log the CSRF token mismatch
+            \Log::warning('CSRF Token Mismatch', [
+                'url' => $request->url(),
+                'method' => $request->method(),
+                'ip' => $request->ip(),
+                'user_agent' => $request->userAgent(),
+                'token_from_request' => $request->input('_token'),
+                'session_token' => $request->session()->token(),
+                'session_id' => $request->session()->getId(),
+            ]);
+
+            // For login page, redirect back with error message
+            if ($request->is('login')) {
+                return redirect()->back()
+                    ->withInput($request->except(['password', '_token']))
+                    ->withErrors(['csrf' => 'Session expired. Please try again.']);
+            }
+
+            // For other pages, redirect to login
+            return redirect()->route('login')
+                ->with('error', 'Your session has expired. Please login again.');
+        }
+    }
+}
+&lt;?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Session\TokenMismatchException;
+use Symfony\Component\HttpFoundation\Response;
+
+class HandleCsrfTokenExpired
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        try {
+            return $next($request);
+        } catch (TokenMismatchException $e) {
+            // Log the CSRF token mismatch
+            \Log::warning('CSRF Token Mismatch', [
+                'url' => $request->url(),
+                'method' => $request->method(),
+                'ip' => $request->ip(),
+                'user_agent' => $request->userAgent(),
+                'token_from_request' => $request->input('_token'),
+                'session_token' => $request->session()->token(),
+                'session_id' => $request->session()->getId(),
+            ]);
+
+            // For login page, redirect back with error message
+            if ($request->is('login')) {
+                return redirect()->back()
+                    ->withInput($request->except(['password', '_token']))
+                    ->withErrors(['csrf' => 'Session expired. Please try again.']);
+            }
+
+            // For other pages, redirect to login
+            return redirect()->route('login')
+                ->with('error', 'Your session has expired. Please login again.');
+        }
+    }
+}
+&lt;?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Session\TokenMismatchException;
+use Symfony\Component\HttpFoundation\Response;
+
+class HandleCsrfTokenExpired
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
+    {
+        try {
+            return $next($request);
+        } catch (TokenMismatchException $e) {
+            // Log the CSRF token mismatch
+            \Log::warning('CSRF Token Mismatch', [
+                'url' => $request->url(),
+                'method' => $request->method(),
+                'ip' => $request->ip(),
+                'user_agent' => $request->userAgent(),
+                'token_from_request' => $request->input('_token'),
+                'session_token' => $request->session()->token(),
+                'session_id' => $request->session()->getId(),
+            ]);
+
+            // For login page, redirect back with error message
+            if ($request->is('login')) {
+                return redirect()->back()
+                    ->withInput($request->except(['password', '_token']))
+                    ->withErrors(['csrf' => 'Session expired. Please try again.']);
+            }
+
+            // For other pages, redirect to login
+            return redirect()->route('login')
+                ->with('error', 'Your session has expired. Please login again.');
+        }
+    }
+}

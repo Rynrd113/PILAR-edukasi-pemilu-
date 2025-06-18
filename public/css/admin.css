@@ -1,0 +1,279 @@
+/* Custom Admin Panel Styles */
+
+/* Additional utility classes */
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Form enhancements */
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
+
+/* Custom table styles */
+.table-hover tr:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* EasyMDE editor custom styles */
+.EasyMDEContainer .editor-toolbar {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+    border-color: #e5e7eb;
+}
+
+.EasyMDEContainer .CodeMirror {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-color: #e5e7eb;
+}
+
+/* Custom badge styles */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1rem;
+}
+
+.badge-primary {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.badge-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* KPU Theme Colors for Admin Panel */
+.kpu-accent-bg {
+    background-color: #f59e0b; /* accent-500 */
+}
+
+.kpu-accent-text {
+    color: #f59e0b; /* accent-500 */
+}
+
+.kpu-primary-bg {
+    background-color: #dc2626; /* primary-600 */
+}
+
+.kpu-primary-text {
+    color: #dc2626; /* primary-600 */
+}
+
+.kpu-gradient {
+    background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
+}
+
+.kpu-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.15);
+}
+
+/* KPU Alert Components */
+.kpu-alert {
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    border-left-width: 4px;
+    margin-bottom: 1rem;
+}
+
+.kpu-alert-success {
+    background-color: #f0fdf4;
+    border-left-color: #22c55e;
+    color: #15803d;
+}
+
+.kpu-alert-error {
+    background-color: #fef2f2;
+    border-left-color: #ef4444;
+    color: #dc2626;
+}
+
+.kpu-alert-warning {
+    background-color: #fffbeb;
+    border-left-color: #f59e0b;
+    color: #d97706;
+}
+
+.kpu-alert-info {
+    background-color: #eff6ff;
+    border-left-color: #3b82f6;
+    color: #1d4ed8;
+}
+
+/* KPU Badge Styles */
+.kpu-badge-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.kpu-badge-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.kpu-badge-success {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* KPU Table Styles */
+.kpu-table {
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.kpu-table thead {
+    background-color: #fef2f2;
+}
+
+.kpu-table th {
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.kpu-table tbody {
+    background-color: white;
+}
+
+.kpu-table td {
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.kpu-table tr:hover {
+    background-color: #fef2f2;
+}
+
+/* KPU Loading Animation */
+.kpu-loading {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f3f4f6;
+    border-top: 2px solid #dc2626;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* KPU Progress Bar */
+.kpu-progress {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 0.625rem;
+}
+
+.kpu-progress-bar {
+    background: linear-gradient(to right, #dc2626, #f59e0b);
+    height: 0.625rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+/* KPU Tooltip */
+.kpu-tooltip {
+    position: absolute;
+    z-index: 10;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    background-color: #7f1d1d;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+
+.kpu-tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #7f1d1d;
+}
