@@ -131,3 +131,5 @@ php artisan migrate
 ---
 
 **✨ Hasil Akhir**: Grafik views di dashboard admin sekarang menampilkan data real yang tersinkron dengan aktivitas user dan tersimpan dalam database dengan proper tracking per hari.
+
+

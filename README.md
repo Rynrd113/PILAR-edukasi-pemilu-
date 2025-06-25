@@ -1,62 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PILAR-edukasi-pemilu
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website edukasi pemilu berbasis Laravel untuk KPU Nduga, fokus pada literasi pemilih pemula dan pengelolaan materi edukasi.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Instalasi & Setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **Clone repository**
+   ```zsh
+git clone <repo-url>
+cd "edukasi-api (0.1) (awal)"
+```
+2. **Install dependencies**
+   ```zsh
+composer install
+```
+3. **Copy file environment**
+   ```zsh
+cp .env.example .env
+```
+   Lalu sesuaikan konfigurasi database di file `.env`.
+4. **Generate key & migrate database**
+   ```zsh
+php artisan key:generate
+php artisan migrate --seed
+```
+5. **Jalankan aplikasi**
+   ```zsh
+php artisan serve
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Fitur Utama
+- Manajemen materi edukasi (CRUD)
+- Kategori materi
+- Statistik interaksi pengguna (views)
+- Manajemen user & admin
+- Dashboard admin
+- Responsive UI (CSS/JS di `public/` dan `resources/`)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Contoh Kode Penting
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Model Materi
+```php
+// app/Models/Materi.php
+class Materi extends Model {
+    // ...existing code...
+    public function incrementViews(): void {
+        $this->timestamps = false;
+        $this->increment('views');
+        $this->timestamps = true;
+        \App\Models\MaterialView::recordView($this->id);
+    }
+    // ...existing code...
+}
+```
 
-## Laravel Sponsors
+### Model Kategori
+```php
+// app/Models/Kategori.php
+class Kategori extends Model {
+    // ...existing code...
+    public function materis(): HasMany {
+        return $this->hasMany(Materi::class);
+    }
+    // ...existing code...
+}
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Statistik Interaksi
+```php
+// app/Models/MaterialView.php
+class MaterialView extends Model {
+    // ...existing code...
+    public static function recordView(int $materiId, ?string $date = null): void {
+        // ...existing code...
+    }
+    // ...existing code...
+}
+```
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Hasil Pengujian
 
-## Contributing
+| Fitur         | Hasil Uji | Keterangan                |
+|---------------|-----------|---------------------------|
+| Login         | Berhasil  | User & admin bisa login   |
+| Statistik     | Berhasil  | Data views tercatat       |
+| Materi CRUD   | Berhasil  | Validasi & relasi berjalan|
+| API Materi    | Berhasil  | Endpoint responsif        |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pengujian dilakukan dengan `test_views_api.php` dan manual pada aplikasi.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Refleksi Tantangan & Solusi
+- **Kendala migrasi**: Pernah terjadi error pada migrasi tabel views karena field belum sesuai, diperbaiki dengan update migrasi dan rollback.
+- **Validasi data**: Beberapa validasi input materi sempat gagal, diselesaikan dengan menambah rules pada FormRequest.
+- **Feedback user**: Ada permintaan fitur statistik harian, diakomodasi dengan model `MaterialView`.
+- **Dokumentasi**: Awalnya dokumentasi teknis kurang detail, lalu ditambah README dan panduan penggunaan untuk staf.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Lampiran
+- Screenshot aplikasi: lihat file `WhatsApp Image 2025-06-22 at 18.34.19.jpeg`
+- Contoh pengujian: lihat `test_views_api.php`
+- Struktur database: lihat folder `database/migrations/`
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# PILAR-edukasi-pemilu-
+Untuk pertanyaan atau pengembangan lebih lanjut, silakan hubungi pengembang utama.
