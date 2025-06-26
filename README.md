@@ -130,11 +130,12 @@ class MaterialView extends Model {
 
 ## 📋 Lampiran
 
-| Dokumen | Deskripsi |
-|---------|-----------|
-| 📸 Screenshot | `WhatsApp Image 2025-06-22 at 18.34.19.jpeg` |
-| 🧪 Testing | `test_views_api.php` |
-| 🗃️ Database | Folder `database/migrations/` |
+| 📁 Dokumen | 📝 Deskripsi | 📂 Lokasi |
+|------------|--------------|-----------|
+| 📸 **Screenshot** | Dokumentasi visual aplikasi | `WhatsApp Image 2025-06-22 at 18.34.19.jpeg` |
+| 🧪 **Testing File** | Script pengujian API views | `test_views_api.php` |
+| 🗃️ **Database Schema** | File migrasi database | `database/migrations/` |
+
 
 ---
 

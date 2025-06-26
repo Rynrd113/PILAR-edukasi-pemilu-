@@ -1,0 +1,188 @@
+flowchart TD
+    %% === BAGIAN UTAMA ===
+    START([MULAI]) --> PILIH_AKSES{Pilih Jenis Akses}
+    
+    %% === ALUR ADMIN ===
+    subgraph ADMIN_AREA [" 🔐 AREA ADMIN "]
+        direction TB
+        INPUT_LOGIN[/Input Username Password/]
+        VALIDASI[Validasi Login]
+        CEK_LOGIN{Login Valid?}
+        ERROR_LOGIN[/Tampilkan Pesan Gagal Login/]
+        DASHBOARD_ADMIN[Dashboard Admin]
+        MENU_ADMIN{Pilih Menu Admin}
+        
+        %% Menu Admin Options
+        MATERI_ADMIN[Manajemen Materi]
+        KATEGORI_ADMIN[Manajemen Kategori] 
+        USER_ADMIN[Manajemen User]
+        STATISTIK_ADMIN[Lihat Statistik]
+        LOGOUT[Logout]
+        
+        %% Koneksi dalam admin area
+        INPUT_LOGIN --> VALIDASI
+        VALIDASI --> CEK_LOGIN
+        CEK_LOGIN -->|Tidak| ERROR_LOGIN
+        CEK_LOGIN -->|Ya| DASHBOARD_ADMIN
+        DASHBOARD_ADMIN --> MENU_ADMIN
+        
+        MENU_ADMIN -->|Kelola Materi| MATERI_ADMIN
+        MENU_ADMIN -->|Kelola Kategori| KATEGORI_ADMIN
+        MENU_ADMIN -->|Kelola User| USER_ADMIN
+        MENU_ADMIN -->|Lihat Statistik| STATISTIK_ADMIN
+        MENU_ADMIN -->|Logout| LOGOUT
+    end
+    
+    %% === CRUD OPERATIONS AREA ===
+    subgraph CRUD_AREA [" ⚙️ OPERASI CRUD "]
+        direction TB
+        
+        %% Materi CRUD
+        CRUD_MATERI[CRUD Materi<br/>Tambah • Edit • Hapus • Toggle Publish]
+        PROSES_MATERI[Proses Data Materi]
+        RESULT_MATERI{Berhasil?}
+        SUKSES_MATERI[/Operasi Berhasil/]
+        ERROR_MATERI[/Gagal Proses Data/]
+        
+        %% Kategori CRUD  
+        CRUD_KATEGORI[CRUD Kategori<br/>Tambah • Edit • Hapus • Toggle Status]
+        PROSES_KATEGORI[Proses Data Kategori]
+        RESULT_KATEGORI{Berhasil?}
+        SUKSES_KATEGORI[/Operasi Berhasil/]
+        ERROR_KATEGORI[/Gagal Proses Data/]
+        
+        %% User CRUD
+        CRUD_USER[CRUD User<br/>Tambah • Edit • Hapus • Reset Password]
+        PROSES_USER[Proses Data User]
+        RESULT_USER{Berhasil?}
+        SUKSES_USER[/Operasi Berhasil/]
+        ERROR_USER[/Gagal Proses Data/]
+        
+        %% Statistik
+        STAT_DASHBOARD[Tampilkan Dashboard Statistik<br/>• Chart Views 7 Hari<br/>• Materi Populer<br/>• Total Data]
+        
+        %% CRUD Flow Connections
+        CRUD_MATERI --> PROSES_MATERI --> RESULT_MATERI
+        RESULT_MATERI -->|Ya| SUKSES_MATERI
+        RESULT_MATERI -->|Tidak| ERROR_MATERI
+        
+        CRUD_KATEGORI --> PROSES_KATEGORI --> RESULT_KATEGORI
+        RESULT_KATEGORI -->|Ya| SUKSES_KATEGORI
+        RESULT_KATEGORI -->|Tidak| ERROR_KATEGORI
+        
+        CRUD_USER --> PROSES_USER --> RESULT_USER
+        RESULT_USER -->|Ya| SUKSES_USER
+        RESULT_USER -->|Tidak| ERROR_USER
+    end
+    
+    %% === ALUR PUBLIK ===
+    subgraph PUBLIC_AREA [" 🌐 AREA PUBLIK "]
+        direction TB
+        HALAMAN_PUBLIK[Halaman Beranda]
+        MENU_PUBLIK{Pilih Menu}
+        
+        %% Browse Options
+        BROWSE_SEMUA[Browse Semua Materi]
+        BROWSE_KATEGORI[Browse per Kategori]
+        CARI_MATERI[/Input Kata Kunci/]
+        
+        %% Data Loading
+        LOAD_MATERI[Load Materi Published]
+        PILIH_KATEGORI[/Pilih Kategori by Slug/]
+        LOAD_BY_KATEGORI[Load Materi by Kategori]
+        PROSES_CARI[Proses Pencarian]
+        
+        %% Display and Interaction
+        TAMPIL_LIST[/Tampilkan Daftar Materi/]
+        PILIH_MATERI{Pilih Materi?}
+        BACA_MATERI[Baca Detail Materi]
+        
+        %% View Tracking
+        CATAT_VIEW[Increment Views & MaterialView]
+        TAMPIL_KONTEN[/Tampilkan Konten Lengkap/]
+        LOAD_RELATED[Load Materi Terkait]
+        
+        %% Response Handling
+        CEK_API{Request API?}
+        RESPONSE_JSON[/Return JSON Response/]
+        RESPONSE_WEB[/Return Web View/]
+        
+        %% Public Area Connections
+        HALAMAN_PUBLIK --> MENU_PUBLIK
+        MENU_PUBLIK -->|Lihat Semua Materi| BROWSE_SEMUA
+        MENU_PUBLIK -->|Pilih Kategori| BROWSE_KATEGORI
+        MENU_PUBLIK -->|Cari Materi| CARI_MATERI
+        
+        BROWSE_SEMUA --> LOAD_MATERI
+        BROWSE_KATEGORI --> PILIH_KATEGORI --> LOAD_BY_KATEGORI
+        CARI_MATERI --> PROSES_CARI
+        
+        LOAD_MATERI --> TAMPIL_LIST
+        LOAD_BY_KATEGORI --> TAMPIL_LIST
+        PROSES_CARI --> TAMPIL_LIST
+        
+        TAMPIL_LIST --> PILIH_MATERI
+        PILIH_MATERI -->|Ya| BACA_MATERI
+        PILIH_MATERI -->|Tidak| MENU_PUBLIK
+        
+        BACA_MATERI --> CATAT_VIEW --> TAMPIL_KONTEN --> LOAD_RELATED
+        LOAD_RELATED --> CEK_API
+        CEK_API -->|Ya| RESPONSE_JSON
+        CEK_API -->|Tidak| RESPONSE_WEB
+        
+        RESPONSE_WEB --> MENU_PUBLIK
+    end
+    
+    %% === ENDINGS ===
+    END([SELESAI])
+    END_API([SELESAI API])
+    
+    %% === MAIN CONNECTIONS ===
+    PILIH_AKSES -->|Admin| INPUT_LOGIN
+    PILIH_AKSES -->|Publik| HALAMAN_PUBLIK
+    ERROR_LOGIN --> PILIH_AKSES
+    
+    %% Admin to CRUD connections
+    MATERI_ADMIN --> CRUD_MATERI
+    KATEGORI_ADMIN --> CRUD_KATEGORI
+    USER_ADMIN --> CRUD_USER
+    STATISTIK_ADMIN --> STAT_DASHBOARD
+    
+    %% Back to Dashboard connections
+    SUKSES_MATERI --> DASHBOARD_ADMIN
+    ERROR_MATERI --> DASHBOARD_ADMIN
+    SUKSES_KATEGORI --> DASHBOARD_ADMIN
+    ERROR_KATEGORI --> DASHBOARD_ADMIN
+    SUKSES_USER --> DASHBOARD_ADMIN
+    ERROR_USER --> DASHBOARD_ADMIN
+    STAT_DASHBOARD --> DASHBOARD_ADMIN
+    
+    %% Final endpoints
+    LOGOUT --> END
+    RESPONSE_JSON --> END_API
+    
+    %% === STYLING ===
+    classDef startEnd fill:#2dd4bf,stroke:#0f766e,stroke-width:4px,color:#fff,font-weight:bold
+    classDef process fill:#3b82f6,stroke:#1e40af,stroke-width:2px,color:#fff
+    classDef decision fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#000,font-weight:bold
+    classDef inputOutput fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    classDef error fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff,font-weight:bold
+    classDef dataProcess fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
+    classDef crud fill:#9f7aea,stroke:#805ad5,stroke-width:2px,color:#fff,font-weight:bold
+    classDef admin fill:#1e40af,stroke:#1e3a8a,stroke-width:2px,color:#fff
+    classDef public fill:#059669,stroke:#047857,stroke-width:2px,color:#fff
+    
+    %% Apply styles to nodes
+    class START,END,END_API startEnd
+    class VALIDASI,DASHBOARD_ADMIN,HALAMAN_PUBLIK,BROWSE_SEMUA,BROWSE_KATEGORI,LOAD_MATERI,LOAD_BY_KATEGORI,PROSES_CARI,BACA_MATERI process
+    class PILIH_AKSES,CEK_LOGIN,MENU_ADMIN,RESULT_MATERI,RESULT_KATEGORI,RESULT_USER,MENU_PUBLIK,PILIH_MATERI,CEK_API decision
+    class INPUT_LOGIN,SUKSES_MATERI,SUKSES_KATEGORI,SUKSES_USER,STAT_DASHBOARD,CARI_MATERI,PILIH_KATEGORI,TAMPIL_LIST,TAMPIL_KONTEN,RESPONSE_JSON,RESPONSE_WEB inputOutput
+    class ERROR_LOGIN,ERROR_MATERI,ERROR_KATEGORI,ERROR_USER error
+    class PROSES_MATERI,PROSES_KATEGORI,PROSES_USER,CATAT_VIEW,LOAD_RELATED dataProcess
+    class CRUD_MATERI,CRUD_KATEGORI,CRUD_USER crud
+    class MATERI_ADMIN,KATEGORI_ADMIN,USER_ADMIN,STATISTIK_ADMIN,LOGOUT admin
+    
+    %% Subgraph styling
+    style ADMIN_AREA fill:#dbeafe,stroke:#1e40af,stroke-width:3px,color:#1e40af
+    style CRUD_AREA fill:#f3e8ff,stroke:#9f7aea,stroke-width:3px,color:#7c3aed
+    style PUBLIC_AREA fill:#d1fae5,stroke:#059669,stroke-width:3px,color:#047857

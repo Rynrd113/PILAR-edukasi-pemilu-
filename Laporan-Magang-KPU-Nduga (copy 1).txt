@@ -1,58 +1,4 @@
-﻿LAPORAN KEGIATAN
-MAGANG MANDIRI
-
-
-
-
-
-Diajukan Oleh: 
-Nama : Reynard Adelard
-NIM : C02.022.008
-
-
-PROGRAM STUDI SISTEM INFORMASI
-FAKULTAS SAINS DAN TEKNOLOGI
-UNIVERSITAS NASIONAL KARANGTURI SEMARANG
-TAHUN 2025
-
-
-Lembar Pengesahan
-Program Studi Sistem Informasi
-Universitas Nasional Karangturi Semarang
-
-Magang Mandiri
-
-KPU Nduga
-
-Oleh:
-Nama Reynard Adelard (Nim C02.022.008)
-
-
-
-Disetujui dan disahkan sebagai
-Laporan Magang Mandiri
-
-
-Semarang, [Tanggal] [Bulan] [Tahun]
-Ketua Program Studi ………
-Universitas Nasional Karangturi Semarang
-Dosen Pembimbing Magang
-
-
-
-
-
-
-
-
-
-[Nama Kaprodi dan Gelar]
-NIK/NIDN/NUPTK ….
-Sekarlangit, S.T., M.Kom
-NIK/NIDN/NUPTK ….
-
-DAFTAR ISI
-BAB I
+﻿BAB I
 PENDAHULUAN
  Latar Belakang
 Pemilihan Umum (Pemilu) adalah pilar utama demokrasi Indonesia. Namun, kenyataannya partisipasi masyarakat, khususnya di Kabupaten Nduga, masih rendah, terutama dari kalangan pemilih pemula. Bukan karena ketidakpedulian, melainkan karena terbatasnya akses terhadap informasi yang benar dan mudah dipahami. Minimnya edukasi kepemiluan menyebabkan sebagian besar generasi muda merasa asing dan ragu berpartisipasi.
@@ -63,7 +9,7 @@ Dari pengalaman tersebut lahirlah ide pengembangan website edukasi pemilu. Websi
 Kegiatan magang saya di KPU Nduga mencakup proses dari perencanaan hingga implementasi lapangan. Saya melakukan analisis kebutuhan informasi kepemiluan, berdiskusi langsung dengan staf untuk menggali permasalahan, dan mengidentifikasi jenis informasi yang dibutuhkan pemilih pemula. Hasil analisis menunjukkan bahwa edukasi yang sederhana, interaktif, dan mudah diakses adalah kunci.
 Berdasarkan temuan itu, saya merancang website edukasi pemilu sesuai kebutuhan lokal. Selain manajemen materi dan kategori, terdapat fitur statistik interaksi pengguna yang memudahkan admin KPU memantau materi paling diminati. Proses pengujian dilakukan rutin menggunakan test_login.sh dan test_views_api.php untuk menjamin keamanan dan kenyamanan pengguna.
 
- Tujuan
+Tujuan
 Tujuan utama dari kegiatan magang ini adalah:
 Menerapkan keilmuan sistem informasi di lingkungan pemerintahan.
 Membantu KPU menyediakan media edukasi pemilu berbasis web.
@@ -75,183 +21,44 @@ BAB II
 GAMBARAN UMUM
 2.1.  Struktur Organisasi
 Struktur organisasi KPU Nduga terdiri atas empat sub bagian: Perencanaan, Data dan Informasi; Teknis Penyelenggara Pemilu dan Hukum; Partisipasi Masyarakat dan SDM; serta Keuangan, Umum, dan Logistik. Posisi mahasiswa magang ditempatkan di Sub Bagian Perencanaan, Data dan Informasi, yang menangani perencanaan program kerja, pengelolaan data pemilih, dan penyampaian informasi kepada masyarakat.
+
+(Struktur Organisasi: Lampirkan foto atau diagram struktur organisasi di sini)
+
 Saya bertugas di unit ini, yang berperan penting dalam pengumpulan, verifikasi, dan pemutakhiran data pemilih serta penyusunan konsep informasi kepemiluan. Posisi ini menjadi penghubung antara pengelolaan data, perencanaan program, dan penyampaian informasi kepada publik.
 2.2. Lingkup Pekerjaan
 Di sub bagian ini, setiap data pemilih harus valid, terverifikasi, dan siap digunakan. Selain itu, unit ini bertanggung jawab merancang program sosialisasi dan menyusun materi informasi kepemiluan.
 Selama magang, saya menganalisis kebutuhan sistem informasi edukasi pemilu, merancang alur sistem, menyusun desain database, serta mengembangkan website menggunakan Laravel. Fitur utama meliputi manajemen materi, kategori, user, dan statistik interaksi. Proses pengujian dilakukan rutin, serta dokumentasi teknis disusun agar staf KPU dapat menggunakan aplikasi secara mandiri.
 Kolaborasi dalam penyusunan konten kepemiluan menjadi pengalaman penting, di mana saya belajar menyederhanakan materi agar mudah dipahami. Inovasi teknologi terbukti hanya efektif jika didukung kerja tim, pemahaman kebutuhan pengguna, dan komitmen beradaptasi.
 2.3. Jadwal Kerja
-	Jadwal kegiatan magang disusun secara bertahap, dimulai dari observasi dan analisis kebutuhan, perancangan sistem, pengembangan aplikasi, pengujian dan dokumentasi, hingga pelatihan staf dan serah terima aplikasi. Setiap tahap difokuskan pada penyelesaian pengembangan aplikasi edukasi pemilu dan transfer pengetahuan kepada staf KPU.
-Nama Kegiatan
-Bulan Ke-1
-Bulan Ke-2
-Bulan Ke-3
-Bulan Ke-4
-I
-II
-III
-IV
-I
-II
-III
-I
-II
-III
-IV
-I
-II
-Observasi & Analisis
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Perancangan Sistem
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Pengembangan Website
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Pengujian & Dokumentasi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Evaluasi & Handover
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Jadwal kegiatan magang disusun secara bertahap, dimulai dari observasi dan analisis kebutuhan, perancangan sistem, pengembangan aplikasi, pengujian dan dokumentasi, hingga pelatihan staf dan serah terima aplikasi. Setiap tahap difokuskan pada penyelesaian pengembangan aplikasi edukasi pemilu dan transfer pengetahuan kepada staf KPU.
+| Nama Kegiatan                    | Bulan 1    |        | Bulan 2    |        |        | Bulan 3    |        |        |        | Bulan 4    |        |
+|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
+|                                  | Minggu 1   | Minggu 2| Minggu 3  | Minggu 4| Minggu 1| Minggu 2  | Minggu 3| Minggu 1| Minggu 2| Minggu 3  | Minggu 4|
+|==================================|============|========|============|========|========|============|========|========|========|============|========|
+| Observasi & Analisis Kebutuhan   |            |    *   |       *    |        |        |            |        |        |        |            |        |
+|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
+| Perancangan Sistem & Database    |            |    *   |        *   |   *    |        |            |        |        |        |            |        |
+|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
+| Pengembangan Website & Fitur     |            |        |    *       |    *   |    *   |      *     |    *   |    *   |    *   |            |        |
+|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
+| Pengujian & Dokumentasi Teknis   |            |        |       *    |     *  |    *   |      *     |    *   |     *  |    *   |   *        |    *   |
+|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
+| Evaluasi, Pelatihan & Handover   |            |        |            |        |        |            |        |   *    |    *   |     *      |   *    |
+|==================================|============|========|============|========|========|============|========|========|========|============|========|
 
 
 BAB III
 HASIL PELAKSANAAN KEGIATAN MAGANG
-Selama magang, saya berhasil mengembangkan website edukasi pemilu yang responsif dan sesuai kebutuhan KPU Nduga. Fitur manajemen materi dan kategori memungkinkan admin menambah, mengedit, dan menghapus materi. Sistem manajemen user menggunakan role admin dan user biasa untuk menjaga keamanan.
+Selama magang, saya mengembangkan website edukasi pemilu yang responsif dan sesuai kebutuhan KPU Nduga. Fitur manajemen materi dan kategori memungkinkan admin menambah, mengedit, dan menghapus materi. Sistem manajemen user menggunakan role admin untuk menjaga keamanan.
 Fitur statistik interaksi mencatat materi yang paling sering diakses. Pengujian sistem dilakukan rutin menggunakan test_login.sh dan test_views_api.php. Website juga dioptimalkan untuk perangkat mobile.
 Selain pengembangan, saya menyusun dokumentasi teknis dan panduan penggunaan, serta memberikan pelatihan kepada staf. Kolaborasi intens dengan pembimbing dan staf sangat membantu memastikan aplikasi benar-benar sesuai kebutuhan institusi.
 
 BAB IV
 PENUTUP
 4.1. Kesimpulan
-	Magang di KPU Nduga menjadi pengalaman berharga dalam pengembangan diri sebagai mahasiswa Sistem Informasi. Saya terlibat langsung mulai analisis kebutuhan, perancangan sistem, pengembangan aplikasi, hingga pengujian. Pengembangan website edukasi pemilu memperkaya kemampuan teknis dan manajemen data, serta membuktikan bahwa teknologi informasi efektif jika diterapkan sesuai kebutuhan lokal.
+		Magang di KPU Nduga menjadi pengalaman berharga dalam pengembangan diri sebagai mahasiswa Sistem Informasi. Saya terlibat langsung mulai analisis kebutuhan, perancangan sistem, pengembangan aplikasi, hingga pengujian. Pengembangan website edukasi pemilu memperkaya kemampuan teknis dan manajemen data, serta membuktikan bahwa teknologi informasi efektif jika diterapkan sesuai kebutuhan lokal.
 
 4.2. Saran
-	Saya merekomendasikan KPU Nduga untuk rutin memperbarui konten edukasi pada website agar relevan dengan perkembangan regulasi. Pelatihan rutin kepada staf perlu dilakukan agar aplikasi dapat dimanfaatkan maksimal.
-Untuk program studi Sistem Informasi, diharapkan lebih banyak materi praktikum terkait pengembangan aplikasi berbasis framework modern. Kolaborasi antara institusi pemerintah dan kampus perlu ditingkatkan agar mahasiswa memiliki pengalaman nyata di lapangan.
+Saya merekomendasikan KPU Nduga untuk rutin memperbarui konten edukasi pada website agar relevan dengan perkembangan regulasi. Pelatihan rutin kepada staf perlu dilakukan agar aplikasi dapat dimanfaatkan maksimal. Bagi program studi Sistem Informasi, diharapkan lebih banyak materi praktikum terkait pengembangan aplikasi berbasis framework modern. Kolaborasi antara institusi pemerintah dan kampus perlu ditingkatkan agar mahasiswa memiliki pengalaman nyata di lapangan.
 
 LAMPIRAN-LAMPIRAN
-
