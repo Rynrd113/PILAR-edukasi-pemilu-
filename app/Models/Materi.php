@@ -12,7 +12,7 @@ class Materi extends Model
     use HasFactory;
 
     /**
-     * The attributes that are mass assignable.
+     * Atribut yang dapat diisi secara mass assignment.
      *
      * @var array<int, string>
      */
@@ -28,7 +28,7 @@ class Materi extends Model
     ];
 
     /**
-     * The attributes that should be cast.
+     * Atribut yang harus di-cast ke tipe data tertentu.
      *
      * @var array<string, string>
      */
@@ -39,7 +39,7 @@ class Materi extends Model
     ];
 
     /**
-     * Get the kategori that owns the materi.
+     * Mendapatkan kategori yang memiliki materi ini.
      */
     public function kategori(): BelongsTo
     {
@@ -47,7 +47,7 @@ class Materi extends Model
     }
 
     /**
-     * Boot the model.
+     * Boot model untuk mengatur event listener.
      */
     protected static function boot(): void
     {
@@ -75,7 +75,7 @@ class Materi extends Model
     }
 
     /**
-     * Scope a query to only include published materials.
+     * Scope query untuk hanya menampilkan materi yang dipublikasikan.
      */
     public function scopePublished($query)
     {
@@ -83,7 +83,7 @@ class Materi extends Model
     }
 
     /**
-     * Increment view count
+     * Menambah jumlah views
      */
     public function incrementViews(): void
     {
@@ -91,12 +91,12 @@ class Materi extends Model
         $this->increment('views');
         $this->timestamps = true;
         
-        // Record daily view
+        // Mencatat view harian
         \App\Models\MaterialView::recordView($this->id);
     }
 
     /**
-     * Get material views relationship
+     * Mendapatkan relasi material views
      */
     public function materialViews()
     {

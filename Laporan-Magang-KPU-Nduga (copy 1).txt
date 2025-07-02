@@ -129,7 +129,7 @@ Saya merekomendasikan KPU Nduga untuk rutin memperbarui konten edukasi pada webs
 
 LAMPIRAN-LAMPIRAN
 
-LAPORAN KEGIATAN HARIAN/MINGGUAN (LOG BOOK)
+Lampiran 1. Laporan Kegiatan Harian/Mingguan (Log Book)
 
 | Tanggal/Hari         | Waktu Datang | Waktu Pulang | Rincian Kegiatan                                                                                  |
 |----------------------|--------------|--------------|---------------------------------------------------------------------------------------------------|
@@ -150,4 +150,16 @@ LAPORAN KEGIATAN HARIAN/MINGGUAN (LOG BOOK)
 | 26-30 Mei 2025       | 08.05-08.13  | 16.06-16.08  | Finalisasi pengembangan aplikasi, pelatihan staf, dokumentasi teknis.                            |
 | 2-6 Juni 2025        | 08.04-08.13  | 16.00-16.13  | Review akhir aplikasi bersama pembimbing, pengujian akhir, update dokumentasi.                   |
 | 9-13 Juni 2025       | 08.07-08.13  | 16.00-16.12  | Finalisasi dokumentasi teknis, knowledge transfer ke staf KPU, penutupan magang teknis.          |
+
+Lampiran 2. Dokumentasi Foto Kegiatan
+- Foto 1: Observasi awal di KPU Nduga (10 Maret 2025)
+- Foto 2: Diskusi dengan staf KPU
+- Foto 3: Presentasi aplikasi ke pembimbing
+(Tiap foto diberi caption di bawahnya)
+
+Lampiran 3. Contoh Hasil Kerja
+- Screenshot halaman utama website edukasi pemilu
+- Potongan kode program penting (misal: model, controller, atau migrasi database)
+- Diagram alur sistem
+
 

@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')                       class="w-full px-3 py-2 border @error('slug') border-red-500 @else border-gray-300 @enderror rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500">
+@extends('admin.layouts.app')
 @section('title', 'Edit Kategori')
 
 @section('content')
