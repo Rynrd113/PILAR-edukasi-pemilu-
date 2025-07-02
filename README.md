@@ -62,7 +62,6 @@ material_views (id, materi_id, view_date, views_count)
 
 #### **Autentikasi**
 ```
-POST /api/register    - Registrasi pengguna baru
 POST /api/login       - Login pengguna
 POST /api/logout      - Logout pengguna (auth required)
 ```
@@ -232,9 +231,8 @@ php artisan serve --host=0.0.0.0 --port=8000
 
 ### Perjalanan Pengguna
 1. **Pengunjung** → Mengakses materi edukasi publik
-2. **Registrasi** → Mendaftar sebagai user untuk fitur tambahan  
-3. **Login** → Akses ke dashboard dan tracking personal
-4. **Admin** → Manajemen konten, statistik, dan user management
+2. **Login** → Akses ke dashboard dan tracking personal (opsional)
+3. **Admin** → Manajemen konten, statistik, dan user management
 
 ### Alur Data
 ```mermaid
