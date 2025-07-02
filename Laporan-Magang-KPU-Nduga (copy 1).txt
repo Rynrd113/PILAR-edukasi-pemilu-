@@ -1,4 +1,60 @@
-﻿BAB I
+﻿LAPORAN KEGIATAN
+MAGANG MANDIRI
+
+
+
+
+
+Diajukan Oleh: 
+Nama: Reynard Adelard
+NIM: C02.022.008
+
+
+PROGRAM STUDI SISTEM INFORMASI
+FAKULTAS SAINS DAN TEKNOLOGI
+UNIVERSITAS NASIONAL KARANGTURI SEMARANG
+TAHUN 2025
+Lembar Pengesahan
+Program Studi Sistem Informasi
+Universitas Nasional Karangturi Semarang
+
+Magang Mandiri
+
+KPU Nduga
+
+Oleh:
+Reynard Adelard (Nim C02.022.008)
+
+
+Disetujui dan disahkan sebagai
+Laporan Magang Mandiri
+
+
+
+
+Ketua Program Studi Sistem Informasi
+Universitas Nasional Karangturi Semarang
+Semarang, [Tanggal] [Bulan] [Tahun]
+Dosen Pembimbing Magang
+
+
+
+
+
+
+
+
+M. Zakki Abdillah, S.Kom., M.Kom.
+NIDN: 0603038704
+Sekarlangit, S.T., M.Kom
+                            NUPTK: 8939775676230202
+
+
+
+
+
+DAFTAR ISI
+BAB I
 PENDAHULUAN
  Latar Belakang
 Pemilihan Umum (Pemilu) adalah pilar utama demokrasi Indonesia. Namun, kenyataannya partisipasi masyarakat, khususnya di Kabupaten Nduga, masih rendah, terutama dari kalangan pemilih pemula. Bukan karena ketidakpedulian, melainkan karena terbatasnya akses terhadap informasi yang benar dan mudah dipahami. Minimnya edukasi kepemiluan menyebabkan sebagian besar generasi muda merasa asing dan ragu berpartisipasi.
@@ -21,9 +77,6 @@ BAB II
 GAMBARAN UMUM
 2.1.  Struktur Organisasi
 Struktur organisasi KPU Nduga terdiri atas empat sub bagian: Perencanaan, Data dan Informasi; Teknis Penyelenggara Pemilu dan Hukum; Partisipasi Masyarakat dan SDM; serta Keuangan, Umum, dan Logistik. Posisi mahasiswa magang ditempatkan di Sub Bagian Perencanaan, Data dan Informasi, yang menangani perencanaan program kerja, pengelolaan data pemilih, dan penyampaian informasi kepada masyarakat.
-
-(Struktur Organisasi: Lampirkan foto atau diagram struktur organisasi di sini)
-
 Saya bertugas di unit ini, yang berperan penting dalam pengumpulan, verifikasi, dan pemutakhiran data pemilih serta penyusunan konsep informasi kepemiluan. Posisi ini menjadi penghubung antara pengelolaan data, perencanaan program, dan penyampaian informasi kepada publik.
 2.2. Lingkup Pekerjaan
 Di sub bagian ini, setiap data pemilih harus valid, terverifikasi, dan siap digunakan. Selain itu, unit ini bertanggung jawab merancang program sosialisasi dan menyusun materi informasi kepemiluan.
@@ -31,20 +84,33 @@ Selama magang, saya menganalisis kebutuhan sistem informasi edukasi pemilu, mera
 Kolaborasi dalam penyusunan konten kepemiluan menjadi pengalaman penting, di mana saya belajar menyederhanakan materi agar mudah dipahami. Inovasi teknologi terbukti hanya efektif jika didukung kerja tim, pemahaman kebutuhan pengguna, dan komitmen beradaptasi.
 2.3. Jadwal Kerja
 Jadwal kegiatan magang disusun secara bertahap, dimulai dari observasi dan analisis kebutuhan, perancangan sistem, pengembangan aplikasi, pengujian dan dokumentasi, hingga pelatihan staf dan serah terima aplikasi. Setiap tahap difokuskan pada penyelesaian pengembangan aplikasi edukasi pemilu dan transfer pengetahuan kepada staf KPU.
-| Nama Kegiatan                    | Bulan 1    |        | Bulan 2    |        |        | Bulan 3    |        |        |        | Bulan 4    |        |
-|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
-|                                  | Minggu 1   | Minggu 2| Minggu 3  | Minggu 4| Minggu 1| Minggu 2  | Minggu 3| Minggu 1| Minggu 2| Minggu 3  | Minggu 4|
-|==================================|============|========|============|========|========|============|========|========|========|============|========|
-| Observasi & Analisis Kebutuhan   |            |    *   |       *    |        |        |            |        |        |        |            |        |
-|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
-| Perancangan Sistem & Database    |            |    *   |        *   |   *    |        |            |        |        |        |            |        |
-|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
-| Pengembangan Website & Fitur     |            |        |    *       |    *   |    *   |      *     |    *   |    *   |    *   |            |        |
-|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
-| Pengujian & Dokumentasi Teknis   |            |        |       *    |     *  |    *   |      *     |    *   |     *  |    *   |   *        |    *   |
-|----------------------------------|------------|--------|------------|--------|--------|------------|--------|--------|--------|------------|--------|
-| Evaluasi, Pelatihan & Handover   |            |        |            |        |        |            |        |   *    |    *   |     *      |   *    |
-|==================================|============|========|============|========|========|============|========|========|========|============|========|
++------------------------+------------+------------+------------+------------+
+
+| Nama Kegiatan          | Bulan Ke-1 | Bulan Ke-2 | Bulan Ke-3 | Bulan Ke-4 |
+
+|                        | I II III IV| I II III   | I II III IV| I II       |
+
++------------------------+------------+------------+------------+------------+
+
+| Observasi & Analisis    |   X  X     |            |            |            |
+
++------------------------+------------+------------+------------+------------+
+
+| Perancangan Sistem      |   X  X  X  |            |            |            |
+
++------------------------+------------+------------+------------+------------+
+
+| Pengembangan Website    |      X  X  | X  X  X    | X  X       |            |
+
++------------------------+------------+------------+------------+------------+
+
+| Pengujian & Dokumentasi |         X  | X  X  X    | X  X  X  X | X  X       |
+
++------------------------+------------+------------+------------+------------+
+
+| Evaluasi & Handover     |            |            |            | X  X       |
+
++------------------------+------------+------------+------------+------------+
 
 
 BAB III
@@ -62,3 +128,26 @@ PENUTUP
 Saya merekomendasikan KPU Nduga untuk rutin memperbarui konten edukasi pada website agar relevan dengan perkembangan regulasi. Pelatihan rutin kepada staf perlu dilakukan agar aplikasi dapat dimanfaatkan maksimal. Bagi program studi Sistem Informasi, diharapkan lebih banyak materi praktikum terkait pengembangan aplikasi berbasis framework modern. Kolaborasi antara institusi pemerintah dan kampus perlu ditingkatkan agar mahasiswa memiliki pengalaman nyata di lapangan.
 
 LAMPIRAN-LAMPIRAN
+
+LAPORAN KEGIATAN HARIAN/MINGGUAN (LOG BOOK)
+
+| Tanggal/Hari         | Waktu Datang | Waktu Pulang | Rincian Kegiatan                                                                                  |
+|----------------------|--------------|--------------|---------------------------------------------------------------------------------------------------|
+| Senin, 10-03-2025    | 08.10        | 16.08        | Observasi awal, pengenalan lingkungan kerja, pengumpulan data kebutuhan informasi.                |
+| Selasa, 11-03-2025   | 08.12        | 16.05        | Diskusi dengan staf KPU, analisis kebutuhan sistem informasi edukasi pemilu.                      |
+| Rabu, 12-03-2025     | 08.07        | 16.10        | Identifikasi masalah utama, penyusunan draft kebutuhan sistem.                                    |
+| Kamis, 13-03-2025    | 08.15        | 16.00        | Penyusunan flowchart alur sistem, diskusi desain database awal.                                   |
+| Jumat, 14-03-2025    | 08.03        | 16.12        | Finalisasi desain database, review bersama pembimbing, persiapan perancangan sistem.              |
+| 17-21 Maret 2025     | 08.06-08.13  | 16.00-16.14  | Perancangan sistem dan database, pembuatan migrasi database di Laravel.                           |
+| 24-28 Maret 2025     | 08.02-08.14  | 16.00-16.12  | Pengembangan fitur manajemen kategori dan materi, pembuatan model dan controller.                 |
+| 31 Mar-4 Apr 2025    | 08.00-08.12  | 16.00-16.13  | Pengembangan fitur user dan role admin, implementasi autentikasi.                                 |
+| 7-11 Apr 2025        | 08.04-08.13  | 16.00-16.11  | Pengembangan fitur statistik interaksi, pembuatan MaterialView, pengujian fitur-fitur utama.      |
+| 14-18 Apr 2025       | 08.07-08.12  | 16.00-16.14  | Pengujian sistem, perbaikan bug, update dokumentasi teknis.                                       |
+| 21-25 Apr 2025       | 08.03-08.13  | 16.00-16.12  | Penyusunan panduan penggunaan, pelatihan staf KPU, pengumpulan feedback.                         |
+| 5-9 Mei 2025         | 08.04-08.13  | 16.00-16.13  | Pengujian lanjutan aplikasi, update dokumentasi, perbaikan minor.                                 |
+| 12-16 Mei 2025       | 08.06-08.12  | 16.00-16.14  | Debugging, optimalisasi performa aplikasi, update dokumentasi teknis.                            |
+| 19-23 Mei 2025       | 08.03-08.13  | 16.00-16.12  | Pengujian regresi, review fitur, perbaikan bug lanjutan.                                         |
+| 26-30 Mei 2025       | 08.05-08.13  | 16.06-16.08  | Finalisasi pengembangan aplikasi, pelatihan staf, dokumentasi teknis.                            |
+| 2-6 Juni 2025        | 08.04-08.13  | 16.00-16.13  | Review akhir aplikasi bersama pembimbing, pengujian akhir, update dokumentasi.                   |
+| 9-13 Juni 2025       | 08.07-08.13  | 16.00-16.12  | Finalisasi dokumentasi teknis, knowledge transfer ke staf KPU, penutupan magang teknis.          |
+
