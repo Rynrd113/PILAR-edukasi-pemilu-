@@ -166,18 +166,17 @@ class MaterialView extends Model {
 ## 🛡️ Middleware & Keamanan
 
 ### Authentication
-- **Laravel Sanctum** untuk API authentication
-- **Role-based access** (user/admin)
+- **Laravel Sanctum** untuk API authentication admin
+- **Admin-only access** untuk semua fitur manajemen
 - **CSRF Protection** untuk form requests
 
 ### Middleware Stack
 ```php
-// Protected Routes
-Route::middleware('auth:sanctum')->group(function () {
-    // Admin-only routes
-    Route::middleware('admin')->group(function () {
-        // CRUD operations for kategori & materi
-    });
+// Admin-only Protected Routes
+Route::middleware(['auth:sanctum', 'admin'])->group(function () {
+    // CRUD operations untuk kategori & materi
+    // Dashboard analytics
+    // Manajemen konten
 });
 ```
 
